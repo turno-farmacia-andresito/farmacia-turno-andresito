@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Farmacia de Turno - Comandante Andresito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Farmacia de Turno - Comandante Andresito</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="card">
 
-    <!-- Logo y localidad -->
-    <div class="localidad">
-        <img src="logo-andresito.png" class="logo" alt="Comandante Andresito">
-        <div class="ciudad">Comandante Andresito</div>
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="logo-andresito.png" alt="Comandante Andresito">
+        <div class="localidad">Comandante Andresito</div>
     </div>
 
     <h1>Farmacia de Turno</h1>
 
-    <p class="info-turno">
+    <div class="info-turno">
         Los turnos comienzan a las 08:00 y finalizan a las 08:00 del día siguiente.
         El sistema muestra el turno correspondiente al día en que inició.
-    </p>
+    </div>
 
     <div id="fecha" class="fecha">Cargando fecha...</div>
-
     <div id="farmacia" class="farmacia">Cargando turno...</div>
 
-    <a id="btn-maps" class="btn btn-maps" target="_blank">
-        <i class="fa-solid fa-location-dot"></i> Cómo llegar
-    </a>
+    <a id="btnMaps" class="btn btn-maps" target="_blank">📍 Cómo llegar</a>
+    <a id="btnWpp" class="btn btn-wpp" target="_blank">🟢 WhatsApp</a>
 
-    <a id="btn-wpp" class="btn btn-wpp" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-    </a>
-
-    <div class="footer">
+    <div class="firma">
         Desarrollado por Braulio
     </div>
 
