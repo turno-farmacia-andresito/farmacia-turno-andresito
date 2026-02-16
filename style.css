@@ -1,106 +1,152 @@
+/* ===============================
+   RESET GENERAL
+================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #12343b, #081c22);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #12343b, #081c22);
+  color: #ffffff;
 }
 
+/* ===============================
+   TARJETA PRINCIPAL
+================================= */
 .card {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    padding: 30px;
-    border-radius: 22px;
-    width: 92%;
-    max-width: 420px;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  width: 92%;
+  max-width: 380px;
+  padding: 32px 26px;
+  border-radius: 24px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+  transition: transform 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   LOGO + LOCALIDAD
+================================= */
 .logo {
-  width: 70px;
+  width: 65px;
   display: block;
-  margin: 0 auto -10px auto; /* más negativo = más cerca */
+  margin: 0 auto 4px auto;
 }
 
 .localidad {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  opacity: 0.9;
-  margin: 0 0 8px 0; /* menos espacio abajo */
+  opacity: 0.85;
+  margin-bottom: 14px;
 }
 
-
-
-}
-
-.ciudad {
-    font-size: 14px;
-    opacity: 0.7;
-    margin-bottom: 10px;
-}
-
+/* ===============================
+   TITULOS
+================================= */
 h1 {
-    margin: 10px 0;
-    font-weight: 700;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
-.info {
-    font-size: 14px;
-    opacity: 0.75;
-    margin-bottom: 20px;
+.descripcion {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin-bottom: 20px;
 }
 
-.fecha {
-    margin-bottom: 8px;
-    font-size: 15px;
-    opacity: 0.8;
+/* ===============================
+   FECHA Y FARMACIA
+================================= */
+#fecha {
+  font-size: 14px;
+  margin-bottom: 8px;
+  opacity: 0.9;
 }
 
-h2 {
-    margin-bottom: 25px;
-    font-weight: 600;
+#farmacia {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 22px;
 }
 
+/* ===============================
+   BOTONES
+================================= */
 .btn {
-    display: block;
-    padding: 14px;
-    margin-bottom: 12px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.btn i {
-    margin-right: 6px;
+  width: 100%;
+  display: inline-block;
+  padding: 15px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.25s ease;
 }
 
 .btn-maps {
-    background: #4a7bd0;
-    color: white;
+  background: linear-gradient(135deg, #5b8def, #4a76c9);
+  color: white;
 }
 
 .btn-maps:hover {
-    background: #3a65b2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(91, 141, 239, 0.4);
 }
 
 .btn-wpp {
-    background: #25D366;
-    color: white;
+  background: linear-gradient(135deg, #28c76f, #20b55f);
+  color: white;
 }
 
 .btn-wpp:hover {
-    background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(40, 199, 111, 0.4);
 }
 
-.credito {
-    font-size: 10px;
-  opacity: 0.4;
-  margin-top: 18px;
+/* ===============================
+   FOOTER
+================================= */
+.footer {
+  margin-top: 16px;
+  font-size: 11px;
+  opacity: 0.5;
+}
+
+/* ===============================
+   RESPONSIVE FINO
+================================= */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  #farmacia {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 26px 20px;
+  }
 }
