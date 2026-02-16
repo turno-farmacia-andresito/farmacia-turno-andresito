@@ -69,11 +69,14 @@ h1 {
 
 /* DESCRIPCIÓN */
 .descripcion {
-  font-size: 13px;
-  line-height: 1.5;
-  opacity: 0.75;
-  margin-bottom: 22px;
+    font-size: 12.5px;
+    line-height: 1.55;
+    opacity: 0.75;
+    max-width: 300px;
+    margin: 0 auto 18px auto;
+    letter-spacing: 0.2px;
 }
+
 
 #fecha {
     font-size: 17px;
