@@ -148,12 +148,12 @@ h1 {
 
 /* FOOTER */
 .footer {
-    font-size: 7px;
+    font-size: 6px !important;
+    font-weight: 200 !important;
     letter-spacing: 1px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.18);
-    margin-top: 26px;
+    margin-top: 30px;
+    opacity: 0.25;
+    color: rgba(255,255,255,0.25) !important;
 }
-
 
 
