@@ -75,12 +75,15 @@ h1 {
   margin-bottom: 22px;
 }
 
-/* FECHA */
 #fecha {
-  font-size: 14px;
-  margin-bottom: 6px;
-  opacity: 0.9;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #e4f1f2;
+    letter-spacing: 0.3px;
 }
+
 
 /* FARMACIA DESTACADA */
 #farmacia {
