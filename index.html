@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Farmacia de Turno - Andresito</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<title>Farmacia de Turno - Comandante Andresito</title>
 
-  <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="card">
+<div class="card">
+
+    <div class="logo-container">
+        <img src="logo-andresito.png" alt="Logo Comandante Andresito" class="logo">
+    </div>
+
+    <div class="localidad">
+        Comandante Andresito
+    </div>
 
     <h1>Farmacia de Turno</h1>
 
     <p class="info-turno">
-      Los turnos comienzan a las 08:00 y finalizan a las 08:00 del día siguiente.  
-      El sistema muestra el turno correspondiente al día en que inició.
+        Los turnos comienzan a las 08:00 y finalizan a las 08:00 del día siguiente.
+        El sistema muestra el turno correspondiente al día en que inició.
     </p>
 
-    <div id="fecha" class="fecha">
-      Cargando fecha...
-    </div>
+    <div id="fecha" class="fecha">Cargando fecha...</div>
 
-    <div id="farmacia" class="farmacia">
-      Cargando turno...
-    </div>
+    <div id="farmacia" class="farmacia">Cargando turno...</div>
 
     <a id="btn-maps" class="btn btn-maps" target="_blank">
-      <i class="fa-solid fa-location-dot"></i> Cómo llegar
+        📍 Cómo llegar
     </a>
 
     <a id="btn-wpp" class="btn btn-wpp" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        🟢 WhatsApp
     </a>
 
-  </div>
+    <div class="footer">
+        Desarrollado por Braulio
+    </div>
 
-  <script src="script.js"></script>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
