@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Farmacia de Turno - Comandante Andresito</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmacia de Turno - Comandante Andresito</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="card">
+  <div class="card">
 
-    <!-- LOGO -->
-    <div class="logo-container">
-        <img src="logo-andresito.png" alt="Comandante Andresito">
-        <div class="localidad">Comandante Andresito</div>
-    </div>
+    <img src="logo-andresito.png" class="logo" alt="Comandante Andresito">
+    <div class="localidad">Comandante Andresito</div>
 
     <h1>Farmacia de Turno</h1>
 
-    <div class="info-turno">
-        Los turnos comienzan a las 08:00 y finalizan a las 08:00 del día siguiente.
-        El sistema muestra el turno correspondiente al día en que inició.
-    </div>
+    <p class="info-turno">
+      Los turnos comienzan a las 08:00 y finalizan a las 08:00 del día siguiente.
+      El sistema muestra el turno correspondiente al día en que inició.
+    </p>
 
     <div id="fecha" class="fecha">Cargando fecha...</div>
     <div id="farmacia" class="farmacia">Cargando turno...</div>
 
-    <a id="btnMaps" class="btn btn-maps" target="_blank">📍 Cómo llegar</a>
-    <a id="btnWpp" class="btn btn-wpp" target="_blank">🟢 WhatsApp</a>
+    <a id="btn-maps" class="btn btn-maps" target="_blank">📍 Cómo llegar</a>
+    <a id="btn-wpp" class="btn btn-wpp" target="_blank">🟢 WhatsApp</a>
 
-    <div class="firma">
-        Desarrollado por Braulio
-    </div>
+    <div class="firma">Desarrollado por Braulio</div>
 
-</div>
+  </div>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
