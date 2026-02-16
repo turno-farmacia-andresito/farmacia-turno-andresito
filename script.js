@@ -1,61 +1,41 @@
-const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTasNN3fvqils4m-YRo2ZEgkOPUT0PfwKd_Zq0JlYU_uoK7GeimiW6DBNc3mInQc83FysdoCT71k_Nl/pub?output=csv";
+const urlCSV = "PEGÁ_ACÁ_TU_LINK_CSV";
 
 async function cargarTurno() {
-  try {
-    const response = await fetch(sheetURL);
-    const data = await response.text();
-    const rows = data.split("\n").slice(1);
+    try {
+        const response = await fetch(urlCSV);
+        const data = await response.text();
 
-    const now = new Date();
+        const filas = data.split("\n").slice(1);
+        const hoy = new Date();
+        hoy.setHours(hoy.getHours() - 8);
 
-    // Ajuste para turno que empieza a las 08:00
-    const horaActual = now.getHours();
-    if (horaActual < 8) {
-      now.setDate(now.getDate() - 1);
+        const fechaHoy = hoy.toISOString().split("T")[0];
+
+        const filaHoy = filas.find(fila => fila.startsWith(fechaHoy));
+
+        if (!filaHoy) {
+            document.getElementById("farmacia").innerText = "No hay turno cargado";
+            return;
+        }
+
+        const columnas = filaHoy.split(",");
+
+        const nombre = columnas[1];
+        const maps = columnas[2];
+        const wpp = columnas[3];
+
+        document.getElementById("farmacia").innerText = nombre;
+
+        document.getElementById("btn-maps").href = maps;
+        document.getElementById("btn-wpp").href = wpp;
+
+        const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("fecha").innerText =
+            hoy.toLocaleDateString("es-AR", opciones);
+
+    } catch (error) {
+        console.error("Error cargando datos:", error);
     }
-
-    const fechaActual = now.toISOString().split("T")[0];
-
-    const fechaTexto = now.toLocaleDateString("es-AR", {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    });
-
-    document.getElementById("fecha").innerText = fechaTexto;
-
-    let turnoEncontrado = false;
-
-    rows.forEach(row => {
-      const cols = row.split(",");
-
-      const fecha = cols[0]?.trim();
-      const farmacia = cols[1]?.trim();
-      const maps = cols[2]?.trim();
-      const whatsapp = cols[3]?.trim();
-
-      if (fecha === fechaActual) {
-        document.getElementById("farmacia").innerText = farmacia;
-
-        const btnMaps = document.getElementById("btn-maps");
-        const btnWpp = document.getElementById("btn-wpp");
-
-        if (btnMaps) btnMaps.href = maps;
-        if (btnWpp) btnWpp.href = whatsapp;
-
-        turnoEncontrado = true;
-      }
-    });
-
-    if (!turnoEncontrado) {
-      document.getElementById("farmacia").innerText = "No hay turno cargado.";
-    }
-
-  } catch (error) {
-    console.error("Error cargando datos:", error);
-    document.getElementById("farmacia").innerText = "Error cargando datos.";
-  }
 }
 
 cargarTurno();
