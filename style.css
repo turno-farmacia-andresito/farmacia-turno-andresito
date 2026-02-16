@@ -21,11 +21,16 @@ body {
 }
 
 .logo {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
-  margin-bottom: 8px;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+ width: 70px;
+  margin-bottom: 4px; /* antes era más grande */
+}
+
+.localidad {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-top: 0;      /* quitamos separación extra */
+  margin-bottom: 12px;
 }
 
 }
