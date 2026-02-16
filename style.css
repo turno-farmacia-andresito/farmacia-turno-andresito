@@ -23,7 +23,7 @@ body {
 .logo {
   width: 70px;
   display: block;
-  margin: 0 auto -6px auto; /* margen negativo para pegarlo al texto */
+  margin: 0 auto -10px auto; /* más negativo = más cerca */
 }
 
 .localidad {
@@ -31,8 +31,9 @@ body {
   font-weight: 500;
   letter-spacing: 0.5px;
   opacity: 0.9;
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0; /* menos espacio abajo */
 }
+
 
 
 }
